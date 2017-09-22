@@ -1,4 +1,4 @@
-QT += core
+QT += core network
 
 CONFIG += c++14
 
@@ -17,9 +17,7 @@ QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]/QtCore
 
 SOURCES += main.cpp
 
-# Force static linking to zbar, but any library concatenated to LIBS should be dynamic
-LIBS +=
-
+LIBS += -Lqhttp/xbin -lqhttp
 
 #for satisfying Qt Creator
 contains(BUILDROOT, yes): {
