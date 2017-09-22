@@ -1,0 +1,3 @@
+config BR2_PACKAGE_MINISERVER
+  bool "miniserver"
+  select BR2_PACKAGE_QT5BASE
